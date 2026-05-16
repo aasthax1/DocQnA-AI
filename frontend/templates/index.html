@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocQnA AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <div class="container">
+
+        <div class="hero-section">
+
+            <h1>📄 DocQnA AI</h1>
+
+            <p>
+                Upload PDFs and ask intelligent questions using
+                semantic AI search.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Upload PDF</h2>
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+
+                <input type="file" name="pdf_file" required>
+
+                <button type="submit">
+                    Upload Document
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>Ask Question</h2>
+
+            <form action="/ask" method="POST">
+
+                <textarea
+                    name="question"
+                    placeholder="Ask anything about your document..."
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Ask AI
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature-box">
+                <h3>⚡ Semantic Search</h3>
+                <p>Uses AI embeddings and vector similarity search.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>🧠 Smart Retrieval</h3>
+                <p>Finds the most relevant document sections instantly.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>📚 PDF Intelligence</h3>
+                <p>Understands resumes, notes, and technical documents.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
